@@ -1,0 +1,187 @@
+% ============================================================================
+% Formatting requirements for future work
+% ============================================================================
+% 1. Follow the standard template's layout and styling.
+% 2. Add every new requirement to this summary in both note projects and the standard template.
+% 3. Transcribe notes almost word for word, preserving notation and order; omit crossed-out content.
+% 4. Store each section in sections/ and include its .tex file with \input.
+% 5. Match source boxes with framed. Use \caseheading only when BOTH conditions are met: the text is obviously a TITLE, and it heads an IMPORTANT group of contents. Ordinary introductory phrases (e.g. The Pauli matrices are) must remain plain text inside the frame; a frame alone does not justify a heading.
+% 6. Use \boldsymbol for vector symbols. amsmath provides it; do not add the bm dependency.
+% 7. Load mathtools and use dcases instead of cases for display-style case systems.
+% 8. Number displayed equations by section. Use equation for a single display; combine consecutive equation blocks with no intervening prose into align. Use align instead of aligned inside equation; suppress intermediate row numbers with \notag when one number is appropriate, leaving the final row numbered. Keep separate numbers for distinct results where useful.
+% 9. Use \texorpdfstring for mathematical titles/headings, with a plain-text PDF alternative.
+% 10. Indent nested source with four spaces; preserve environment boundaries and matrix/equation rows, keeping optional row spacing attached to \\.
+% 11. Compile to stable numbering, contents, and bookmarks with zero warnings; inspect PDF spacing, frames, and clipping.
+% 12. Add readable source spaces around operators and &, after commas, and between indexed factors/index commands; keep scripts and arguments attached to their symbols.
+% 13. Rely on VS Code word wrap; do not manually wrap prose, comments, or logical equation rows. Keep paragraph breaks and structural line breaks.
+% 14. Use \bra{}, \ket{}, and \braket{} for bras, kets, and inner products/matrix elements instead of manually assembling angle delimiters and bars.
+% 15. Use consistent title case for section and subsection headings; use plural topic names where appropriate (e.g. One-Particle States and Covariant Fields), and spell out representation in headings.
+% 16. Correct minor grammar and unnatural wording while preserving mathematical meaning, notation, and the source order.
+% 18. In align, place an implication arrow before the alignment marker: \Rightarrow \quad & ..., so the expression to the right of the arrow aligns with the other rows.
+% 19. Use \tensor{R}{_\mu^{\mu'}_\nu^{\nu'}} for ordered tensor indices instead of chaining scripts with empty {} groups; apply the same convention to other tensor symbols.
+% 20. Use \frac{}{} for fractions; do not use \dfrac.
+% 21. Use ordinary \\ row breaks, not starred \\* row breaks; preserve optional row spacing.
+% 22. Read mathematical expressions for meaning when spacing source: separate product factors, operator actions, individual tensor indices, and spin-state labels (e.g. i (* F), \ket{A a; B b}, and s_j s_k X). Fully brace both fraction arguments, e.g. \frac{1}{4} (I + s_j L + s_k R + s_j s_k X); do not use shorthand such as \frac14. Preserve commands, scripts, and mathematical meaning.
+% 23. Allow align environments to break naturally across pages; let LaTeX handle pagination. Do not add samepage wrappers or other page-break restrictions to keep an alignment, its heading, or introductory text together.
+% ============================================================================
+
+\RequirePackage{fix-cm} % Scalable Computer Modern math at the template heading sizes.
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{framed}
+\usepackage[medium]{titlesec}
+\usepackage{cite}
+\usepackage[normalem]{ulem}
+\usepackage{extarrows}
+\usepackage{slashed}
+\usepackage{isodateo}
+\usepackage{graphicx}
+\usepackage{capt-of}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[bookmarksnumbered=true,bookmarksopen=true]{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor=NavyBlue,
+    citecolor=PineGreen,
+    urlcolor=PineGreen
+}
+\usepackage[hmargin=.7in,vmargin=1.1in]{geometry}
+% \usepackage{indentfirst}
+\usepackage{booktabs}
+\usepackage{bbm}
+
+\linespread{1.1}
+% \graphicspath{{fig/}}
+
+% \newcommand{\FR}[2]{\displaystyle\frac{\,{#1}\,}{#2}}
+% \newcommand{\fr}[2]{\mbox{$\frac{\,{#1}\,}{#2}$}}
+% \newcommand{\n}{\nonumber}
+% \renewcommand{\rm}{\mathrm}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+% \newcommand{\red}{\color{red}}
+% \newcommand{\blue}{\color{blue}}
+% \newcommand{\gray}{\color{gray}}
+% \newcommand{\hl}{\color[rgb]{1,0,.5}}
+
+% \def\bge{\begin{equation}}
+% \def \ede{\end{equation}}
+% \def\bga{\begin{aligned}}
+% \def\eda{\end{aligned}}
+% \def\bgb{\begin{bmatrix}}
+% \def\edb{\end{bmatrix}}
+% \def\bgp{\begin{pmatrix}}
+% \def\edp{\end{pmatrix}}
+% \def\bgm{\begin{matrix}}
+% \def\edm{\end{matrix}}
+% \def\bgs{\begin{subequations}}
+% \def\eds{\end{subequations}}
+
+% \newcommand{\order}[1]{\mathcal{O}({#1})}
+% \def\di{{\mathrm{d}}}
+% \def\D{{\mathrm{D}}}
+% \def\Di{{\mathcal{D}}}
+
+% \def\mb{\mathbf}
+% \def\ms{\mathscr}
+% \def\mf{\mathfrak}
+% \def\mc{\mathcal}
+% \def\cl{\mathrm{cl}}
+% \def\pd{\partial}
+% \def\ld{{\mathscr{L}}}
+% \def\hd{{\mathscr{H}}}
+% \def\z{{\bar{z}}}
+% \def\sla{\slashed}
+% \def\const{\mathrm{const.}}
+% \setlength\unitlength{1mm}
+% \def\tr{\mathrm{\,tr\,}}
+% \def\Tr{\mathrm{\,Tr\,}}
+% \def\Det{\mathrm{\,Det\,}}
+% \def\to{\rightarrow}
+% \def\To{\Rightarrow}
+% \def\ii{\mathrm{i}}
+
+% \def\al{\alpha}
+% \def\be{\beta}
+% \def\ga{\gamma}
+% \def\de{\delta}
+% \def\ec{{{\mathsf{A}}}}
+% \def\ep{\epsilon}
+% \def\ka{\kappa}
+% \def\lam{\lambda}
+% \def\rh{\rho}
+% \def\si{\sigma}
+% \def\ze{\zeta}
+
+% \def\aa{\mathsf{a}}
+% \def\bb{\mathsf{b}}
+% \def\cc{\mathsf{c}}
+% \def\dd{\mathsf{d}}
+
+% \def\Wh{\mathrm{W}}
+% \def\Mp{M_{\text{Pl}}}
+% \def\Re{\mathrm{Re}\,}
+% \def\Im{\mathrm{Im}\,}
+
+% \newcommand{\ob}[1]{\mkern 2mu \overline{\mkern -2mu #1 \mkern -2mu}\mkern 2mu}
+% \newcommand{\wt}[1]{\mkern 2mu \widetilde{\mkern -2mu #1 \mkern -2mu}\mkern 2mu}
+% \newcommand{\wh}[1]{\mkern 2mu \widehat{\mkern-2mu#1\mkern-2mu}\mkern 2mu}
+\newcommand{\fnemail}[1]{\footnote{Email: \href{mailto:#1}{\nolinkurl{#1}}}}
+
+% \newcommand{\zx}[1]{{\color{BrickRed}{[{ZX:} #1]}}}
+% \newcommand{\jz}[1]{{\color{Blue}{[{JZ:} #1]}}}
+\definecolor{CaseHeadingBG}{RGB}{235,240,248}
+\newcommand{\caseheading}[1]{%
+    \noindent\colorbox{CaseHeadingBG}{%
+        \parbox{\dimexpr\linewidth-2\fboxsep\relax}{\bfseries #1}%
+    }\par\smallskip
+}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\titleformat{\section}{\normalfont\fontsize{15}{20}\bfseries\boldmath}{\thesection}{1em}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Use titlesec for bold text and math in headings.
+\titleformat{\subsection}{\normalfont\large\bfseries\boldmath}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\boldmath}{\thesubsubsection}{1em}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{equation}{section}
+\allowdisplaybreaks % allow page breaks inside math environments globally
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{braket}
+\usepackage{cancel}
+
+\usepackage{tensor} % how to handle indices: https://tex.stackexchange.com/questions/11542/left-and-right-subscript-superscript
+% left and right index: \tensor[_a]{M}{_b}
+
+\usepackage{simpler-wick} % to use Wick contraction
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Transcription of the handwritten source; source-page comments are in sections.
+\newcommand{\id}{\mathbbm{1}}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Anti}{Anti}
+\begin{document}
+    \title{\Large\textbf{1PSs \& Field Operators}}
+    \author{Siyang Wan\fnemail{wansy25@mails.tsinghua.edu.cn} \ and ChatGPT\\[5mm] \normalsize{\emph{Department of Physics, Tsinghua University}}}
+    \date{}
+    \maketitle
+    \tableofcontents
+    \newpage
+    \input{sections/Poincare algebra.tex}
+    \input{sections/One-particle states.tex}
+    \input{sections/Covariant field.tex}
+    \input{sections/Coefficient transformation rules.tex}
+    \input{sections/Start from k and CG coefficients.tex}
+
+\end{document}

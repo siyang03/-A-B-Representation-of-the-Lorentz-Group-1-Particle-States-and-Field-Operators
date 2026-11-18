@@ -1,0 +1,11 @@
+*.DS_Store
+* alias
+Link to *
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.gz
+*.toc
+*.xdv

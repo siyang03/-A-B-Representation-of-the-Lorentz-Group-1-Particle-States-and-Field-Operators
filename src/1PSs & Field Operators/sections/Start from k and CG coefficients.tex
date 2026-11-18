@@ -1,0 +1,73 @@
+% Source pages 6--7.
+\section{\texorpdfstring{Starting from $k$}{Starting from k}}
+\subsection{\texorpdfstring{Boost: $W_{L(p), k} = 1$}{Boost: W(L(p),k) = 1}}
+\begin{equation}
+    \begin{dcases}
+        \displaystyle \sum_{\ell'} D_{\ell \ell'} (L(p)) u_{\ell'} (k, \sigma) = u_\ell(p, \sigma), \\[3mm]
+        \displaystyle \sum_{\ell'} D_{\ell \ell'} (L(p)) v_{\ell'} (k, \sigma) = v_\ell(p, \sigma).
+    \end{dcases}
+\end{equation}
+\subsection{\texorpdfstring{Rotation: $W_{R, k} = R$}{Rotation: W(R,k) = R}}
+\begin{equation}
+    \begin{dcases}
+        \displaystyle \sum_{\ell'} D_{\ell \ell'} (R) u_{\ell'} (k, \sigma) = \sum_{\sigma'} D_{\sigma' \sigma} (R) u_\ell(k, \sigma'), \\[3mm]
+        \displaystyle \sum_{\ell'} D_{\ell \ell'} (R) v_{\ell'} (k, \sigma) = \sum_{\sigma'} D^*_{\sigma' \sigma} (R) v_\ell(k, \sigma').
+    \end{dcases}
+\end{equation}
+The corresponding generators on the right are $J^{(j)}_{\sigma' \sigma}$ and $- J^{(j)*}_{\sigma' \sigma}$, respectively.
+\subsection{CG Coefficients}
+\begin{align}
+    \boldsymbol{J} \ket{j \sigma} & = \ket{j \sigma'} \braket{j \sigma' | \boldsymbol{J} | j \sigma''} \braket{j \sigma'' | j \sigma} \notag \\
+    & = \ket{j \sigma'} \boldsymbol{J}^{(j)}_{\sigma' \sigma}, \notag \\
+    \bra{A a; B b} \boldsymbol{J} & = \boldsymbol{J}^A_{a a'} \bra{A a'; B b} + \boldsymbol{J}^B_{b b'} \bra{A a; B b'} \\
+    & \left( \boldsymbol{J}^{A \otimes B} = \boldsymbol{J}^A \id^B + \id^A \boldsymbol{J}^B \right) \\
+    \Rightarrow \quad \braket{A a; B b | \boldsymbol{J} | j \sigma} & = \braket{A a B b | j \sigma'} \boldsymbol{J}^{(j)}_{\sigma' \sigma} \notag \\
+    & = \boldsymbol{J}^{A \otimes B}_{a a' b b'} \braket{A a' B b' | j \sigma}.
+\end{align}
+\begin{framed}
+    \begin{equation}
+        - \boldsymbol{J}^{(j)*}_{\sigma \sigma'} = (- 1)^{\sigma' - \sigma} \boldsymbol{J}^{(j)}_{- \sigma, - \sigma'}
+    \end{equation}
+    or
+    \begin{align}
+        & \begin{dcases}
+            S_{\sigma \sigma'} = (- 1)^{j - \sigma} \delta_{\sigma, - \sigma'}, \\
+            S^2 = 1
+        \end{dcases}
+        \quad \text{and} \quad \boldsymbol{J}^{(j)} S = - S \boldsymbol{J}^{(j)*} \\
+        \Rightarrow \quad & v = u S \quad \text{or} \quad v_\ell(p, \sigma) = u_\ell(p, \sigma') S_{\sigma' \sigma}.
+    \end{align}
+\end{framed}
+\begin{equation}
+    \Rightarrow \quad v_\ell(p, \sigma) = (- 1)^{j + \sigma} u_\ell(p, - \sigma).
+\end{equation}
+\subsection{\texorpdfstring{Boosting the CG Coefficients to $u_\ell(p, \sigma)$ and $v_\ell(p, \sigma)$}{Boosting the CG Coefficients to u(p,sigma) and v(p,sigma)}}
+Since $u_\ell(k, \sigma) = \braket{A a B b | j \sigma}$, we need only the $(A, B)$ representation of the boost to calculate
+\begin{equation}
+    u_\ell(p, \sigma) = \sum_{\ell'} D_{\ell \ell'} (L(p)) u_{\ell'} (k, \sigma).
+\end{equation}
+\begin{framed}
+    The $(A, B)$ representation of the Lorentz group is
+    \begin{equation}
+        [J_i, J_j] = i \epsilon_{i j k} J_k, \qquad [K_i, K_j] = - i \epsilon_{i j k} J_k, \qquad [J_i, K_j] = i \epsilon_{i j k} K_k.
+    \end{equation}
+    Let $A_i = \frac{1}{2} (J_i + i K_i)$, $B_i = \frac{1}{2} (J_i - i K_i)$. Then
+    \begin{equation}
+        \boldsymbol{J} = \boldsymbol{A} + \boldsymbol{B}, \qquad \boldsymbol{K} = - i (\boldsymbol{A} - \boldsymbol{B}),
+    \end{equation}
+    and
+    \begin{equation}
+        \boldsymbol{A} \to \boldsymbol{J}^{(A)} \id^B, \qquad \boldsymbol{B} \to \id^A \boldsymbol{J}^{(B)}.
+    \end{equation}
+\end{framed}
+\begin{align}
+    & D_{\ell \ell'} (L(p)) u_{\ell'} = e^{ - i \chi \hat{\boldsymbol{p}} \cdot \boldsymbol{K}} u_{\ell'} (k, \sigma), \\
+    & \ell \to a b, \qquad \ell' \to a' b', \qquad e^{ - i \chi \hat{\boldsymbol{p}} \cdot \boldsymbol{K}} = e^{ - \chi \hat{\boldsymbol{p}} \cdot (\boldsymbol{J}^{(A)} - \boldsymbol{J}^{(B)})}
+\end{align}
+with
+\begin{equation}
+    \begin{dcases}
+        \sinh \chi = \frac{|\boldsymbol{p} |}{m}, \\[2mm]
+        \cosh \chi = \frac{\omega_p}{m}.
+    \end{dcases}
+\end{equation}

@@ -1,0 +1,119 @@
+% Source pages 7--10.
+\section{Projection Operators}
+Since $T_{\alpha \gamma \dot\beta \dot\delta} = T_{\mu \nu} \sigma^\mu_{\alpha \dot\beta} \sigma^\nu_{\gamma \dot\delta}$, we can write down the projected tensor using $\mu \nu$ indices.
+\begin{framed}
+    The inner product is
+    \begin{equation}
+        u \cdot v = - \frac{1}{2} \epsilon^{\dot\beta \dot\beta'} \epsilon^{\alpha \alpha'} u_{\alpha' \dot\beta'} v_{\alpha \dot\beta}.
+    \end{equation}
+\end{framed}
+The projection operators are
+\begin{equation}
+    \tensor{{P^{(1)}}}{_a^{a'}_b^{b'}} = \frac{1}{2} (\delta_a^{a'} \delta_b^{b'} + \delta_b^{a'} \delta_a^{b'}), \qquad \tensor{{P^{(0)}}}{_a^{a'}_b^{b'}} = - \frac{1}{2} \epsilon_{a b} \epsilon^{a' b'}
+\end{equation}
+and
+\begin{align}
+    \tensor{{P^{(1, 1)}}}{_\alpha^{\alpha'}_\gamma^{\gamma'}_{\dot\beta}^{\dot\beta'}_{\dot\delta}^{\dot\delta'}} & = \tensor{{P^{(1)}}}{_\alpha^{\alpha'}_\gamma^{\gamma'}} \tensor{{P^{(1)}}}{_{\dot\beta}^{\dot\beta'}_{\dot\delta}^{\dot\delta'}}, \notag \\
+    P^{(1, 0)} & = P^{(1)} \otimes P^{(0)}, \notag \\
+    & \cdots
+\end{align}
+\begin{framed}
+    \begin{align}
+        \tensor{P}{_\mu^{\mu'}_\nu^{\nu'}} = {} & \left(- \frac{\bar\sigma_\mu^{\dot\beta \alpha}}{2} \right) \left(- \frac{\bar\sigma^{\mu' \dot\beta'' \alpha''}}{2} \underbrace{\epsilon_{\dot\beta'' \dot\beta'} \epsilon_{\alpha'' \alpha'}}_{\text{contribute } (- 2)} \times (- 2) \right) \notag \\
+        & \times \left(- \frac{\bar\sigma_\nu^{\dot\delta \gamma}}{2} \right) \left(- \frac{\sigma^{\nu'}_{\gamma' \dot\delta'}}{2} \times (- 2) \right) \tensor{P}{_\alpha^{\alpha'}_\gamma^{\gamma'}_{\dot\beta}^{\dot\beta'}_{\dot\delta}^{\dot\delta'}}.
+    \end{align}
+\end{framed}
+\begin{framed}
+    More naturally, we should raise and lower indices with
+    \begin{equation}
+        \frac{i}{\sqrt{2}} \epsilon^{\alpha \beta} \quad \& \quad \frac{\sqrt{2}}{i} \epsilon_{\alpha \beta}.
+    \end{equation}
+\end{framed}
+The indices of the preceding $P^{\alpha' \gamma' \dot\beta' \dot\delta'}$ are \emph{not} raised by $\epsilon^{\alpha \beta}$ but by $\frac{\sqrt{2}}{i} \epsilon^{\alpha \beta}$.
+% Source page 8.
+Consider
+\begin{align}
+    L & = (P^{(1)} - P^{(0)}) \otimes (P^{(1)} + P^{(0)}) \notag \\
+    & = P^{(1, 1)} + P^{(1, 0)} - P^{(0, 1)} - P^{(0, 0)}
+\end{align}
+and
+\begin{align}
+    R & = (P^{(1)} + P^{(0)}) \otimes (P^{(1)} - P^{(0)}) \notag \\
+    & = P^{(1, 1)} - P^{(1, 0)} + P^{(0, 1)} - P^{(0, 0)},
+\end{align}
+Conversely,
+\begin{equation}
+    P^{(j, k)} = \frac{1}{4} (I + s_j L) (I + s_k R) \quad \text{with} \quad
+    \begin{dcases}
+        s_1 = + 1, \\
+        s_0 = - 1.
+    \end{dcases}
+\end{equation}
+\begin{framed}
+    \begin{align}
+        L R & = (P^{(1)} - P^{(0)}) \otimes (P^{(1)} - P^{(0)}) \notag \\
+        & = P^{(1, 1)} - P^{(1, 0)} - P^{(0, 1)} + P^{(0, 0)}
+    \end{align}
+    since
+    \begin{equation}
+        P^{(1)} \cdot P^{(1)} = P^{(1)}, \qquad P^{(0)} \cdot P^{(0)} = P^{(0)}
+    \end{equation}
+    and
+    \begin{equation}
+        P^{(1)} \cdot P^{(0)} = P^{(0)} \cdot P^{(1)} = 0.
+    \end{equation}
+\end{framed}
+The benefit of considering $L$ and $R$ is that
+\begin{equation}
+    \begin{dcases}
+        \tensor{(P^{(1)} + P^{(0)})}{_a^{a'}_b^{b'}} = \delta_a^{a'} \delta_b^{b'}, \\
+        \tensor{(P^{(1)} - P^{(0)})}{_a^{a'}_b^{b'}} = \delta_a^{b'} \delta_b^{a'}.
+    \end{dcases}
+\end{equation}
+% Source page 9. The displayed L/R signs below follow the manuscript.
+This makes $L$ and $R$ easy to project to tensor indices,
+\begin{align}
+    \tensor{L}{_\mu^{\mu'}_\nu^{\nu'}} & = \frac{1}{4} \bar\sigma_\mu^{\dot\beta \alpha} \sigma^{\mu'}_{\alpha' \dot\beta'} \bar\sigma_\nu^{\dot\delta \gamma} \sigma^{\nu'}_{\gamma' \dot\delta'} \delta_\alpha^{\gamma'} \delta_\gamma^{\alpha'} \delta_{\dot\beta}^{\dot\beta'} \delta_{\dot\delta}^{\dot\delta'} \notag \\
+    & = \frac{1}{4} \Tr(\sigma^{\nu'} \bar\sigma_\nu \sigma^{\mu'} \bar\sigma_\mu) \notag \\
+    & = \frac{1}{2} \bigl(\delta_\mu^{\mu'} \delta_\nu^{\nu'} + \mu' \leftrightarrow \nu' - \eta_{\mu \nu} \eta^{\mu' \nu'} + i \tensor{\epsilon}{_{\mu \nu}^{\mu' \nu'}} \bigr). \\
+    \tensor{R}{_\mu^{\mu'}_\nu^{\nu'}} & = \frac{1}{4} \bar\sigma_\mu^{\dot\beta \alpha} \sigma^{\mu'}_{\alpha' \dot\beta'} \bar\sigma_\nu^{\dot\delta \gamma} \sigma^{\nu'}_{\gamma' \dot\delta'} \delta_\alpha^{\alpha'} \delta_\gamma^{\gamma'} \delta_{\dot\beta}^{\dot\delta'} \delta_{\dot\delta}^{\dot\beta'} \notag \\
+    & = \frac{1}{4} \Tr(\bar\sigma_\mu \sigma^{\mu'} \bar\sigma_\nu \sigma^{\nu'}) \notag \\
+    & = \tensor{L}{_\mu^{\nu'}_\nu^{\mu'}} \notag \\
+    & = \frac{1}{2} \bigl(\delta_\mu^{\mu'} \delta_\nu^{\nu'} + \mu' \leftrightarrow \nu' - \eta_{\mu \nu} \eta^{\mu' \nu'} - i \tensor{\epsilon}{_{\mu \nu}^{\mu' \nu'}} \bigr).
+\end{align}
+A more compact notation is
+\begin{equation}
+    I = \delta_\mu^{\mu'} \delta_\nu^{\nu'}, \qquad X = \delta_\mu^{\nu'} \delta_\nu^{\mu'}, \qquad G = \eta_{\mu \nu} \eta^{\mu' \nu'}
+\end{equation}
+then
+\begin{equation}
+    L = \frac{1}{2} (I + X - G + i \epsilon), \qquad R = \frac{1}{2} (I + X - G - i \epsilon)
+\end{equation}
+and
+\begin{equation}
+    P^{(j, k)} = \frac{1}{4} (I + s_j L + s_k R + s_j s_k X).
+\end{equation}
+% Source page 10.
+Explicitly,
+\begin{align}
+    P^{(1, 1)} & = \frac{1}{2} (I + X) - \frac{1}{4} G, \notag \\
+    P^{(1, 0)} & = \frac{1}{4} (I - X + i \epsilon), \notag \\
+    P^{(0, 1)} & = \frac{1}{4} (I - X - i \epsilon), \notag \\
+    P^{(0, 0)} & = \frac{1}{4} G.
+\end{align}
+For a tensor $T_{\mu \nu}$, let $T = \tensor{T}{^\mu_\mu}$ and
+\begin{equation}
+    \begin{dcases}
+        F_{\mu \nu} = T_{[\mu \nu]}, \\
+        (* F)_{\mu \nu} = \frac{1}{2} \tensor{\epsilon}{_{\mu \nu}^{\rho \sigma}} F_{\rho \sigma},
+    \end{dcases}
+\end{equation}
+then
+\begin{framed}
+    \begin{align}
+        (P^{(1, 1)} T)_{\mu \nu} & = T_{(\mu \nu)} - \frac{1}{4} \eta_{\mu \nu} T, \notag \\
+        (P^{(1, 0)} T)_{\mu \nu} & = \frac{1}{2} \bigl(F_{\mu \nu} + i (* F)_{\mu \nu} \bigr), \notag \\
+        (P^{(0, 1)} T)_{\mu \nu} & = \frac{1}{2} \bigl(F_{\mu \nu} - i (* F)_{\mu \nu} \bigr), \notag \\
+        (P^{(0, 0)} T)_{\mu \nu} & = \frac{1}{4} \eta_{\mu \nu} T.
+    \end{align}
+\end{framed}

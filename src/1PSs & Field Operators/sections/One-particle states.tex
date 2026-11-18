@@ -1,0 +1,60 @@
+% Source pages 2--3.
+\section{One-Particle States}
+We use the identity component of the Poincar\'e group to classify one-particle states:
+\begin{equation}
+    P^\mu \ket{p, \sigma} = p^\mu \ket{p, \sigma}.
+\end{equation}
+Consider a Lorentz transformation
+\begin{align}
+    & P^\mu U(\Lambda) \ket{p, \sigma} = (\Lambda p)^\mu U(\Lambda) \ket{p, \sigma} \\
+    \Rightarrow \quad & U(\Lambda) \ket{p, \sigma} = \sum_{\sigma'} C_{\sigma' \sigma} (\Lambda, p) \ket{p, \sigma'}.
+\end{align}
+\subsection{\texorpdfstring{Standard Momentum $k$ and $p = L(p) k$}{Standard Momentum k and p = L(p)k}}
+With a standard momentum $k$, we can define
+\begin{equation}
+    \ket{p, \sigma} \equiv U(L(p)) \ket{k, \sigma}.
+\end{equation}
+For any Lorentz transformation, we write
+\begin{equation}
+    U(\Lambda) \ket{p, \sigma} = U(L(\Lambda p)) U(W(\Lambda, p)) \ket{k, \sigma}
+\end{equation}
+where
+\begin{equation}
+    W(\Lambda, p) \equiv L^{ - 1} (\Lambda p) \Lambda L(p) \in \text{little group}.
+\end{equation}
+For a little-group element, we have
+\begin{equation}
+    U(W) \ket{k, \sigma} = \sum_{\sigma'} D_{\sigma' \sigma} (W) \ket{k, \sigma'}.
+\end{equation}
+Then we have
+\begin{equation}
+    U(\Lambda) \ket{p, \sigma} = \sum_{\sigma'} \overbrace{D_{\sigma' \sigma} (W)}^{\text{unitary}} \ket{\Lambda p, \sigma'}, \qquad C_{\sigma' \sigma} (\Lambda, p) = D_{\sigma' \sigma} (W).
+\end{equation}
+\subsection{\texorpdfstring{Massive: $k^\mu = (m, 0, 0, 0)$}{Massive: k = (m,0,0,0)}}
+For massive particles, $D_{\sigma' \sigma} (W) \in \text{spin-}j \text{ rep. of }SO(3)$,
+\begin{equation}
+    W \in SO(3).
+\end{equation}
+\subsection{\texorpdfstring{Massless: $k^\mu = (1, 0, 0, 1)$}{Massless: k = (1,0,0,1)}}
+An infinitesimal transformation is
+\begin{equation}
+    U(W(\theta, \alpha, \beta)) = 1 + i \alpha A + i \beta B + i \theta J_3
+\end{equation}
+with
+\begin{equation}
+    \begin{dcases}
+        A = J_2 + K_1, \\
+        B = - J_1 + K_2
+    \end{dcases}
+    \quad \text{and} \quad
+    \begin{dcases}
+        [J_3, A] = i B, \\
+        {}[J_3, B] = - i A, \\
+        {}[A, B] = 0.
+    \end{dcases}
+\end{equation}
+\begin{framed}
+    \begin{equation}
+        D_{\sigma \sigma'} (W) = e^{i \theta \sigma} \delta_{\sigma \sigma'}.
+    \end{equation}
+\end{framed}

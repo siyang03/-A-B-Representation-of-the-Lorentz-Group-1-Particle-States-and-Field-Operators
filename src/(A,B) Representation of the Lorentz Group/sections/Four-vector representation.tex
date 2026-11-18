@@ -1,0 +1,44 @@
+% Source pages 3--4.
+\section{\texorpdfstring{Building $(\frac{1}{2}, \frac{1}{2}) = (\frac{1}{2}, 0) \otimes (0, \frac{1}{2})$}{Building (1/2,1/2) = (1/2,0) x (0,1/2)}}
+\begin{equation}
+    V_{(\frac{1}{2}, \frac{1}{2})} \ni \ket{v} = \tensor{v}{_\alpha^{\dot\beta}} \ket{\tfrac{1}{2}, \alpha; \tfrac{1}{2}, \dot\beta}, \quad v_{\alpha \dot{\beta}} = \epsilon_{\dot\beta \dot\beta'} \tensor{v}{_\alpha^{\dot\beta'}},
+\end{equation}
+and
+\begin{equation}
+    \tensor{(J^{\mu \nu})}{_\alpha^\beta_{\dot\gamma}^{\dot\delta}} = \tensor{(J_L^{\mu \nu})}{_\alpha^\beta} \id + \id \tensor{(J_R^{\mu \nu})}{_{\dot\gamma}^{\dot\delta}}.
+\end{equation}
+\subsection{Four-Vector Representation}
+\begin{equation}
+    V_4 = \mathbb R^{1, 3} \ni v^\mu
+\end{equation}
+and
+\begin{equation}
+    \tensor{(J^{\mu \nu})}{^\rho_\sigma} = - i \bigl(\eta^{\mu \rho} \delta^\nu_\sigma - \mu \leftrightarrow \nu \bigr) \quad \Longleftrightarrow \quad
+    \begin{dcases}
+        \tensor{(J_i)}{^j_k} = - i \epsilon_{i j k}, \\
+        \tensor{(K_i)}{^0_j} = i \delta_{i j} = \tensor{(K_i)}{^j_0}.
+    \end{dcases} \label{Four-vector representation}
+\end{equation}
+\subsection{The Explicit Map and the Intertwining Proof}
+With the definitions
+\begin{equation}
+    \begin{dcases}
+        \sigma^\mu_{\alpha \dot\beta} = (1, \boldsymbol{\sigma}), \\
+        \bar\sigma^{\mu \dot\beta \alpha} = \epsilon^{\alpha \alpha'} \epsilon^{\dot\beta \dot\beta'} \sigma^\mu_{\alpha' \dot\beta'} = (1, - \boldsymbol{\sigma}),
+    \end{dcases}
+\end{equation}
+the map $F:\mathbb R^{1, 3} \to V_{(\frac{1}{2}, \frac{1}{2})}$ is
+\begin{equation}
+    F: v^\mu \mapsto v_{\alpha \dot\beta} = v_\mu \sigma^\mu_{\alpha \dot\beta}.
+\end{equation}
+\begin{framed}
+    The metric and trace identity are
+    \begin{equation}
+        \eta_{\mu \nu} = (- 1, + 1, + 1, + 1) \quad \text{and} \quad \underbrace{\Tr(\bar\sigma^\mu \sigma^\nu)}_{ \bar\sigma^{\mu \dot\beta \alpha} \sigma^\nu_{\alpha \dot\beta}} = - 2 \eta^{\mu \nu},
+    \end{equation}
+    So
+    \begin{equation}
+        v^\mu = - \frac{\bar\sigma^{\mu \dot\beta \alpha}}{2} v_{\alpha \dot\beta} = - \frac{1}{2} \Tr(\bar\sigma^\mu v).
+    \end{equation}
+\end{framed}
+It can be shown that $v^\mu$ and $v_{\alpha \dot\beta}$ transform equivalently under the Lorentz group, see Eq. \eqref{Four-vector representation of the Lorentz transformation}.

@@ -1,0 +1,26 @@
+% Source page 4.
+\section{Covariant Fields}
+\begin{equation}
+    \psi_\ell(x) = \sum_\sigma \int \frac{d^3 p}{(2 \pi)^3 2 \omega_p} \left(\kappa u_\ell(p, \sigma) a_{p, \sigma} e^{i p \cdot x} + \lambda v_\ell(p, \sigma) a^{c \dagger}_{p, \sigma} e^{ - i p \cdot x} \right).
+\end{equation}
+The Poincar\'e transformations $U(\Lambda, a)$ are understood as free-field transformations $U_0(\Lambda, a)$ in these notes.
+
+As noted above,
+\begin{equation}
+    U(\Lambda, a) = U(1, a) U(\Lambda, 0).
+\end{equation}
+We need
+\begin{equation}
+    \underbrace{U(\Lambda, a) \psi_\ell(x) U^{ - 1} (\Lambda, a)}_{ U(\Lambda, a) \text{ unitary}} = \sum_{\bar\ell} \underbrace{D_{\ell \bar\ell} (\Lambda^{ - 1})}_{ \text{need not be unitary}} \psi_{\bar\ell} (\Lambda x + a).
+\end{equation}
+\subsection{Creation and Annihilation Operators}
+For the creation and annihilation operators we have
+\begin{align}
+    U(\Lambda, a) a_{p, \sigma} U^\dagger(\Lambda, a) & = e^{ - i a \cdot P} \underbrace{U(\Lambda) a_{p, \sigma} U^\dagger(\Lambda)}_{ \displaystyle \sum_{\sigma'} (D_{\sigma' \sigma} (W))^* a_{\Lambda p, \sigma'}} e^{i a \cdot P} \notag \\
+    & = e^{i a \cdot \Lambda p} \sum_{\sigma'} D_{\sigma \sigma'} (W^\dagger) a_{\Lambda p, \sigma'}.
+\end{align}
+$U(\Lambda, a)$ must be unitary; $U^\dagger(\Lambda, a)$ is the unitary inverse. Here $(D_{\sigma' \sigma} (W))^* = D_{\sigma \sigma'} (W^\dagger)$.
+\begin{equation}
+    U(\Lambda, a) a^{c \dagger}_{p, \sigma} U^\dagger(\Lambda, a) = e^{ - i a \cdot \Lambda p} \sum_{\sigma'} D_{\sigma' \sigma} (W) a_{\Lambda p, \sigma'}, % Source omits the creation dagger here.
+\end{equation}
+with $D_{\sigma' \sigma} (W) = D^*_{\sigma \sigma'} (W^\dagger)$.

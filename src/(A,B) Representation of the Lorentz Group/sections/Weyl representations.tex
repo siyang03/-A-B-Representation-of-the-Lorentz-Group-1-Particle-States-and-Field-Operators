@@ -1,0 +1,76 @@
+% Source pages 2--3.
+\section{\texorpdfstring{$(\frac{1}{2}, 0)$ \& $(0, \frac{1}{2})$ Representations}{(1/2,0) and (0,1/2) Representations}}
+\begin{framed}
+    The Pauli matrices are
+    \begin{equation}
+        \sigma_1 = \begin{pmatrix} 0 & 1 \\
+            1 & 0
+        \end{pmatrix}, \qquad
+        \sigma_2 = \begin{pmatrix} 0 & - i \\
+            i & 0
+        \end{pmatrix}, \qquad
+        \sigma_3 = \begin{pmatrix} 1 & 0 \\
+            0 & - 1
+        \end{pmatrix}.
+    \end{equation}
+\end{framed}
+\subsection{\texorpdfstring{$(\frac{1}{2}, 0)$ Representation}{(1/2,0) Representation}}
+\begin{equation}
+    V_{(\frac{1}{2}, 0)} \ni \ket{\psi} = \sum_{\alpha = \pm \frac{1}{2}} \psi_\alpha \ket{\tfrac{1}{2}, \alpha; 0, 0}
+\end{equation}
+and
+\begin{equation}
+    \begin{dcases}
+        \tensor{(\boldsymbol{A}^L)}{_\alpha^\beta} = \frac{\boldsymbol{\sigma}}{2}, \\
+        \tensor{(\boldsymbol{B}^L)}{_\alpha^\beta} = 0
+    \end{dcases}
+    \quad \Longleftrightarrow \quad
+    \begin{dcases}
+        \tensor{(\boldsymbol{J}^L)}{_\alpha^\beta} = \frac{\boldsymbol{\sigma}}{2}, \\
+        \tensor{(\boldsymbol{K}^L)}{_\alpha^\beta} = - \frac{i \boldsymbol{\sigma}}{2},
+    \end{dcases}
+\end{equation}
+where $L$ simply means $(\frac{1}{2}, 0)$.
+
+\subsection{\texorpdfstring{$(0, \frac{1}{2})$ Representation}{(0,1/2) Representation}}
+In the $(0, \frac{1}{2})$ representation, we have
+\begin{equation}
+    \begin{dcases}
+        \tensor{(\boldsymbol{A}^R)}{_{\dot\alpha}^{\dot\beta}} = 0, \\
+        \tensor{(\boldsymbol{B}^R)}{_{\dot\alpha}^{\dot\beta}} = - \frac{\boldsymbol{\sigma}^*}{2}
+    \end{dcases}
+    \quad \Longleftrightarrow \quad
+    \begin{dcases}
+        \tensor{(\boldsymbol{J}^R)}{_{\dot\alpha}^{\dot\beta}} = - \frac{\boldsymbol{\sigma}^*}{2}, \\
+        \tensor{(\boldsymbol{K}^R)}{_{\dot\alpha}^{\dot\beta}} = - \frac{i \boldsymbol{\sigma}^*}{2}.
+    \end{dcases}
+\end{equation}
+Define
+\begin{equation}
+    \epsilon_{\dot\alpha \dot\beta} = \begin{pmatrix} 0 & 1 \\
+        - 1 & 0
+    \end{pmatrix}, \qquad
+    \epsilon^{\dot\alpha \dot\beta} = \begin{pmatrix} 0 & - 1 \\
+        1 & 0
+    \end{pmatrix},
+\end{equation}
+we have $\epsilon_{\dot\alpha \dot\beta} \epsilon^{\dot\beta \dot\gamma} = \delta_{\dot\alpha}^{\dot\gamma}$. In particular,
+\begin{equation}
+    \epsilon^{\dot\alpha \dot\alpha'} \tensor{(\boldsymbol{\sigma}^*)}{_{\dot\alpha'}^{\dot\beta'}} \epsilon_{\dot\beta' \dot\beta} = \tensor{(- \boldsymbol{\sigma})}{^{\dot\alpha}_{\dot\beta}},
+\end{equation}
+so we have
+\begin{equation}
+    \begin{dcases}
+        \tensor{(\boldsymbol{A}^R)}{^{\dot\alpha}_{\dot\beta}} = 0, \\
+        \tensor{(\boldsymbol{B}^R)}{^{\dot\alpha}_{\dot\beta}} = \frac{\boldsymbol{\sigma}}{2}
+    \end{dcases}
+    \quad \Longleftrightarrow \quad
+    \begin{dcases}
+        \tensor{(\boldsymbol{J}^R)}{^{\dot\alpha}_{\dot\beta}} = \frac{\boldsymbol{\sigma}}{2}, \\
+        \tensor{(\boldsymbol{K}^R)}{^{\dot\alpha}_{\dot\beta}} = \frac{i \boldsymbol{\sigma}}{2}.
+    \end{dcases}
+\end{equation}
+It is shown above that $\epsilon$'s help us to retain a normal $(\tfrac{1}{2})$ representation on $\boldsymbol{B}$, with
+\begin{equation}
+    V_{(0, \frac{1}{2})} \ni \ket{\chi} = \chi^{\dot\alpha} \ket{0, 0; \tfrac{1}{2}, \dot\alpha} = \epsilon^{\dot\alpha \dot\beta} \chi_{\dot\beta} \ket{0, 0; \tfrac{1}{2}, \dot\alpha}.
+\end{equation}

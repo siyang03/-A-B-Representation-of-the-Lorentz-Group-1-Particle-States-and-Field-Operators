@@ -1,0 +1,129 @@
+\section{\texorpdfstring{$(\frac{1}{2}, \frac{1}{2})$}{(1/2,1/2)} and Clifford Algebra}
+The complexified Clifford algebra $\mathrm{Cl}_{1,3}(\mathbb R)_{\mathbb C}$ has the grades
+\begin{align}
+    \text{grade 0:} \quad & I && \text{(scalar)}, \notag \\
+    \text{grade 1:} \quad & \gamma^\mu && \text{(vector)}, \notag \\
+    \text{grade 2:} \quad & J^{\mu \nu} = - \frac{i}{4} [\gamma^\mu, \gamma^\nu] && \text{(bivector/tensor)}, \notag \\
+    \text{grade 3:} \quad & \gamma^\mu \gamma_5 && \text{(pseudovector)}, \notag \\
+    \text{grade 4:} \quad & \gamma_5 = - i \gamma^0 \gamma^1 \gamma^2 \gamma^3 && \text{(pseudoscalar)},
+\end{align}
+with
+\begin{equation}
+    \{\gamma^\mu, \gamma^\nu\} = 2 \eta^{\mu \nu}, \qquad \eta^{\mu \nu} = (- 1, + 1, + 1, + 1).
+\end{equation}
+\begin{framed}
+    It can be shown that
+    \begin{equation}
+        \begin{dcases}
+            [J^{\mu \nu}, J^{\rho \sigma}] = i (\eta^{\mu \rho} J^{\nu \sigma} - \cdots), \\
+            [J^{\mu \nu}, \gamma^\rho] = i (\eta^{\mu \rho} \gamma^\nu - \eta^{\nu \rho} \gamma^\mu).
+        \end{dcases}
+    \end{equation}
+\end{framed}
+\begin{framed}
+    Although not immediately related to these notes, the parity transformation is related to $\beta = i \gamma^0$, with
+    \begin{align}
+        \beta \gamma^i \beta^{- 1} & = - \gamma^i, \qquad \beta \gamma^0 \beta^{- 1} = \gamma^0, \notag \\
+        \beta J^{i j} \beta^{- 1} & = J^{i j}, \qquad \beta J^{i 0} \beta^{- 1} = - J^{i 0}, \qquad \beta \gamma_5 \beta^{- 1} = - \gamma_5.
+    \end{align}
+\end{framed}
+
+% Source page 12. The corrected handwritten heading uses L direct-sum R.
+\subsection{\texorpdfstring{$L \oplus R$ and $\mathrm{Cl}_{1,3}$ from $\gamma_5$}{L + R and Cl(1,3) from gamma5}}
+Observe that
+\begin{equation}
+    \begin{dcases}
+        [\gamma_5, J^{\mu \nu}] = 0, \qquad \text{simultaneous diagonalization for a specific } \mu \nu, \\
+        (\gamma_5)^2 = I, \qquad \text{eigenvalues are } \pm 1.
+    \end{dcases}
+\end{equation}
+\begin{framed}
+    Not directly relevant here, but
+    \begin{equation}
+        \{\gamma_5, \gamma^\mu\} = 0.
+    \end{equation}
+\end{framed}
+We can construct $\ket{\psi_L} \oplus \ket{\psi_R}$, or
+\begin{equation}
+    \begin{pmatrix}
+        \psi_L \\
+        \psi_R
+    \end{pmatrix},
+\end{equation}
+and
+\begin{equation}
+    \gamma_5 = \begin{pmatrix}
+        I_L & 0 \\
+        0 & - I_R
+    \end{pmatrix}.
+\end{equation}
+\subsection{\texorpdfstring{Dirac $(\frac{1}{2}, 0) \oplus (0, \frac{1}{2})$ Representation}{Dirac (1/2,0) + (0,1/2) Representation}}
+\begin{align}
+    \gamma^\mu & = - i \begin{pmatrix}
+        \tensor{0}{_\alpha^\beta} & (\sigma^\mu)_{\alpha \dot\beta} \\
+        \bar\sigma^{\mu \dot\alpha \beta} & \tensor{0}{^{\dot\alpha}_{\dot\beta}}
+    \end{pmatrix}, \\
+    J^{\mu \nu} & = \frac{i}{4} \begin{pmatrix}
+        \tensor{(\sigma^{\mu \nu})}{_\alpha^\beta} & 0_{\alpha \dot\beta} \\
+        0^{\dot\alpha \beta} & \tensor{(\bar\sigma^{\mu \nu})}{^{\dot\alpha}_{\dot\beta}}
+    \end{pmatrix},
+\end{align}
+where
+\begin{equation}
+    \begin{dcases}
+        \sigma^{\mu \nu} = \sigma^\mu \bar\sigma^\nu - \sigma^\nu \bar\sigma^\mu, \\
+        \bar\sigma^{\mu \nu} = \bar\sigma^\mu \sigma^\nu - \bar\sigma^\nu \sigma^\mu.
+    \end{dcases}
+\end{equation}
+\begin{framed}
+    \begin{equation}
+        \gamma^\mu: L \to R, \quad R \to L.
+    \end{equation}
+\end{framed}
+
+% Source page 13. Crossed-out content is omitted.
+Since $\{\gamma^\mu, \gamma^\nu\} = 2 \eta^{\mu \nu}$, we have
+\begin{equation}
+    \begin{dcases}
+        \sigma^\mu \bar\sigma^\nu + \sigma^\nu \bar\sigma^\mu = - 2 \eta^{\mu \nu} \tensor{\id}{_\alpha^\beta}, \\
+        \bar\sigma^\mu \sigma^\nu + \bar\sigma^\nu \sigma^\mu = - 2 \eta^{\mu \nu} \tensor{\id}{^{\dot\alpha}_{\dot\beta}},
+    \end{dcases}
+\end{equation}
+or
+\begin{equation}
+    \sigma^\mu_{\alpha \dot\gamma} \sigma^\nu_{\beta \dot\delta} \epsilon^{\dot\gamma \dot\delta} + \mu \leftrightarrow \nu = - 2 \eta^{\mu \nu} \epsilon_{\beta \alpha}.
+\end{equation}
+\subsection{\texorpdfstring{$(\frac{1}{2}, \frac{1}{2})$ Representation}{(1/2,1/2) Representation}}
+\begin{align}
+    & \tensor{\left(\exp\left(i \frac{\omega_{\mu \nu}}{2} \frac{i}{4} \sigma^{\mu \nu}\right)\right)}{_\alpha^\beta} \epsilon_{\dot\alpha \dot\alpha'} \tensor{\left(\exp\left(i \frac{\omega_{\mu \nu}}{2} \frac{i}{4} \bar\sigma^{\mu \nu}\right)\right)}{^{\dot\alpha'}_{\dot\beta'}} \epsilon^{\dot\beta' \dot\beta} \sigma^\mu_{\beta \dot\beta} \notag \\
+    & = \tensor{\left(\exp\left(- \frac{\omega_{\rho \sigma}}{2} i J^{\rho \sigma}\right)\right)}{^\mu_\nu} \sigma^\nu_{\alpha \dot\alpha}. \label{Four-vector representation of the Lorentz transformation}
+\end{align}
+The minus sign ensures that $v_\mu \sigma^\mu_{\alpha \dot\alpha}$ and $v_\mu$ transform correctly.
+
+\begin{framed}
+    Let $\omega_{\mu \nu}$ to be infinitesimal,
+    \begin{align}
+        \text{LHS} &= \Big( 1 + \frac{- 1}{8} \omega_{\mu \nu} \sigma^{\mu \nu} \Big) \sigma^\mu \Big( 1 - \frac{- 1}{8} \omega_{\mu \nu} \bar{\sigma}^{\mu \nu} \Big) \notag \\
+        &= \sigma^\mu - \frac{1}{8} \omega_{\rho \sigma} (\sigma^{\rho \sigma} \sigma^\mu - \sigma^\mu \bar{\sigma}^{\rho \sigma}).
+    \end{align}
+    The Clifford algebra tells us
+    \begin{align}
+        & [J^{\mu \nu}, \gamma^\rho] = i (\eta^{\mu \rho} \gamma^\nu - \eta^{\nu \rho} \gamma^\mu) \notag \\
+        \Rightarrow \quad & \frac{1}{4} \begin{pmatrix}
+            0 & \sigma^{\mu \nu} \sigma^\rho - \sigma^\rho \bar{\sigma}^{\mu \nu} \\
+            \bar{\sigma}^{\mu \nu} \bar{\sigma}^\rho - \bar{\sigma}^\rho \sigma^{\mu \nu} & 0
+        \end{pmatrix} = \begin{pmatrix}
+            0 & \eta^{\mu \rho} \sigma^\nu - \eta^{\nu \rho} \sigma^\mu \\
+            \eta^{\mu \rho} \bar{\sigma}^\nu - \eta^{\nu \rho} \bar{\sigma}^\mu & 0
+        \end{pmatrix} \notag \\
+        \Rightarrow \quad & - \frac{1}{8} \omega_{\rho \sigma} (\sigma^{\rho \sigma} \sigma^\mu - \sigma^\mu \bar{\sigma}^{\rho \sigma}) = - \frac{1}{2} \omega_{\rho \sigma} (\eta^{\rho \mu} \sigma^\sigma - \eta^{\sigma \mu} \sigma^\rho).
+    \end{align}
+    We have
+    \begin{equation}
+        \text{LHS} = \sigma^\mu - \frac{1}{2} (\tensor{\omega}{^\mu_\nu} - \tensor{\omega}{_\nu^\mu}) \sigma^\nu = \text{RHS},
+    \end{equation}
+    where we used \eqref{Four-vector representation},
+    \begin{equation}
+        - \frac{\omega_{\rho \sigma}}{2} i \tensor{(J^{\rho \sigma})}{^\mu_\nu} = - \frac{1}{2} (\tensor{\omega}{^\mu_\nu} - \tensor{\omega}{_\nu^\mu}).
+    \end{equation}
+\end{framed}

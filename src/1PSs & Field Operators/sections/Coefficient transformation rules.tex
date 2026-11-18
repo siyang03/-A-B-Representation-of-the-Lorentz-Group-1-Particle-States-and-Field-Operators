@@ -1,0 +1,32 @@
+% Source page 5.
+\section{Coefficient Transformation Rules}
+Therefore,
+\begin{align}
+    & U(\Lambda, a) \psi_\ell(x) U^\dagger(\Lambda, a) \notag \\
+    & = \sum_{\sigma, \sigma'} \int \frac{d^3 p}{(2 \pi)^3 2 \omega_p} \Bigl(\kappa u_\ell(p, \sigma) D_{\sigma \sigma'} (W^\dagger) a_{\Lambda p, \sigma'} e^{i p \cdot x + i a \cdot \Lambda p} \notag \\
+    & \hspace{40mm} + \lambda v_\ell(p, \sigma) D^*_{\sigma \sigma'} (W^\dagger) a^{c \dagger}_{\Lambda p, \sigma'} e^{ - i p \cdot x - i a \cdot \Lambda p} \Bigr) \notag \\
+    & = \sum_{\sigma, \sigma'} \int \frac{d^3 p}{(2 \pi)^3 2 \omega_p} \Bigl(\kappa u_\ell(\Lambda^{ - 1} p, \sigma) D_{\sigma \sigma'} (W^\dagger) a_{p, \sigma'} e^{i p \cdot (\Lambda x + a)} \notag \\
+    & \hspace{40mm} + \lambda v_\ell(\Lambda^{ - 1} p, \sigma) D^*_{\sigma \sigma'} (W^\dagger) a^{c \dagger}_{p, \sigma'} e^{ - i p \cdot (\Lambda x + a)} \Bigr).
+\end{align}
+In the first integral, $W = W(\Lambda, p)$; in the second, $W = W(\Lambda, \Lambda^{ - 1} p)$.
+\begin{framed}
+    We need
+    \begin{equation}
+        \begin{dcases}
+            \displaystyle \sum_\sigma u_\ell(\Lambda^{ - 1} p, \sigma) D_{\sigma \sigma'} (W^\dagger) = \sum_{\ell'} D_{\ell \ell'} (\Lambda^{ - 1}) u_{\ell'} (p, \sigma'), \\[3mm]
+            \displaystyle \sum_\sigma v_\ell(\Lambda^{ - 1} p, \sigma) D^*_{\sigma \sigma'} (W^\dagger) = \sum_{\ell'} D_{\ell \ell'} (\Lambda^{ - 1}) v_{\ell'} (p, \sigma'),
+        \end{dcases}
+    \end{equation}
+    where
+    \begin{align}
+        W^\dagger(\Lambda, \Lambda^{ - 1} p) & = \bigl[L^{ - 1} (p) \Lambda L(\Lambda^{ - 1} p) \bigr]^{ - 1} \notag \\
+        & = L^{ - 1} (\Lambda^{ - 1} p) \Lambda^{ - 1} L(p) = W(\Lambda^{ - 1}, p).
+    \end{align}
+\end{framed}
+\begin{equation}
+    \Rightarrow \quad
+    \begin{dcases}
+        \displaystyle \sum_{\ell'} D_{\ell \ell'} (\Lambda) u_{\ell'} (p, \sigma) = \sum_{\sigma'} D_{\sigma' \sigma} (W(\Lambda, p)) u_\ell(\Lambda p, \sigma'), \\[3mm]
+        \displaystyle \sum_{\ell'} D_{\ell \ell'} (\Lambda) v_{\ell'} (p, \sigma) = \sum_{\sigma'} D^*_{\sigma' \sigma} (W(\Lambda, p)) v_\ell(\Lambda p, \sigma').
+    \end{dcases}
+\end{equation}

@@ -1,0 +1,25 @@
+% Source page 1.
+\section{\texorpdfstring{$(A, B)$}{(A,B)} Representation}
+Start with the Lorentz Lie algebra:
+\begin{equation}
+    [J_i, J_j] = i \epsilon_{i j k} J_k, \qquad [K_i, K_j] = - i \epsilon_{i j k} J_k, \qquad [J_i, K_j] = i \epsilon_{i j k} K_k.
+\end{equation}
+Let $\boldsymbol{A} = \frac{1}{2} (\boldsymbol{J} + i \boldsymbol{K})$, $\boldsymbol{B} = \frac{1}{2} (\boldsymbol{J} - i \boldsymbol{K})$. Then
+\begin{equation}
+    \boldsymbol{J} = \boldsymbol{A} + \boldsymbol{B}, \qquad \boldsymbol{K} = - i (\boldsymbol{A} - \boldsymbol{B}),
+\end{equation}
+and we can represent $\boldsymbol{A}$ and $\boldsymbol{B}$ by
+\begin{equation}
+    \boldsymbol{A} = \boldsymbol{J}^{(A)} \id^B, \qquad \boldsymbol{B} = \id^A \boldsymbol{J}^{(B)}.
+\end{equation}
+They act on
+\begin{equation}
+    \ket{w} = \sum_{a, b} w_{a b} \ket{A a; B b} \in V_A \otimes V_B \equiv V_{(A, B)},
+\end{equation}
+explicitly,
+\begin{equation}
+    \begin{dcases}
+        \boldsymbol{J}^{(A)} \id^B \ket{w} = \bigl(\boldsymbol{J}^{(A)}_{a a'} w_{a' b} \bigr) \ket{A a; B b}, \\
+        \id^A \boldsymbol{J}^{(B)} \ket{w} = \bigl(\boldsymbol{J}^{(B)}_{b b'} w_{a b'} \bigr) \ket{A a; B b}.
+    \end{dcases}
+\end{equation}

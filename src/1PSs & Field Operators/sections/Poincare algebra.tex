@@ -1,0 +1,43 @@
+% Source pages 1--2.
+\section{Poincar\'e Algebra}
+An infinitesimal Poincar\'e transformation is
+\begin{equation}
+    U(1 + \omega, a) = 1 - \frac{i}{2} \omega_{\mu \nu} J^{\mu \nu} - i a_\mu P^\mu.
+\end{equation}
+The commutation relations are
+\begin{align}
+    [J^{\mu \nu}, J^{\rho \sigma}] & = i \bigl(\eta^{\mu \rho} J^{\nu \sigma} - \cdots \bigr), \\
+    [J^{\mu \nu}, P^\rho] & = i \bigl(\eta^{\mu \rho} P^\nu - \eta^{\nu \rho} P^\mu \bigr).
+\end{align}
+The Lorentz generators can be classified into
+\begin{align}
+    \text{rotations:} \quad & \boldsymbol{J} = (J^{23}, J^{31}, J^{12}), \notag \\
+    \text{boosts:} \quad & \boldsymbol{K} = (J^{01}, J^{02}, J^{03}),
+\end{align}
+and
+\begin{equation}
+    \begin{dcases}
+        [J_i, J_j] = i \epsilon_{i j k} J_k, \\
+        [K_i, K_j] = - i \epsilon_{i j k} J_k, \\
+        [J_i, K_j] = i \epsilon_{i j k} K_k,
+    \end{dcases} \quad \begin{dcases}
+        [J_i, P_j] = i \epsilon_{i j k} P_k, \\
+        [K_i, P_j] = - i \delta_{i j} H, \\
+        [K_i, H] = - i P_i.
+    \end{dcases}
+\end{equation}
+\begin{framed}
+    A finite Poincar\'e group element is $(\Lambda, a)$, and
+    \begin{align}
+        & (\Lambda, a) x = \Lambda x + a \\
+        \Rightarrow \quad & (\Lambda_2, a_2) (\Lambda_1, a_1) = (\Lambda_2 \Lambda_1, \Lambda_2 a_1 + a_2).
+    \end{align}
+    In particular,
+    \begin{equation}
+        (1, a) (\Lambda, 0) = (\Lambda, a)
+    \end{equation}
+    or
+    \begin{equation}
+        U(\Lambda, a) = e^{ - i a \cdot P} e^{ - \frac{i}{2} \omega J}.
+    \end{equation}
+\end{framed}

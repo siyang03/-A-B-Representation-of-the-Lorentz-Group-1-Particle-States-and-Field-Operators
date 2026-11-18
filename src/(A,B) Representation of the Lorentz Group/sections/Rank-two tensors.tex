@@ -1,0 +1,62 @@
+% Source pages 5--6.
+\section{\texorpdfstring{$(\frac{1}{2}, \frac{1}{2}) \otimes (\frac{1}{2}, \frac{1}{2})$: Rank-Two Tensors}{(1/2,1/2) x (1/2,1/2): Rank-Two Tensors}}
+\begin{equation}
+    V_{(\frac{1}{2}, \frac{1}{2}) \otimes (\frac{1}{2}, \frac{1}{2})} \ni \ket{T} = \tensor{T}{_\alpha_\gamma^{\dot\beta}^{\dot\delta}} \ket{\tfrac{1}{2}, \alpha; \tfrac{1}{2}, \dot\beta} \ket{\tfrac{1}{2}, \gamma; \tfrac{1}{2}, \dot\delta}
+\end{equation}
+and
+\begin{equation}
+    T_{\alpha \gamma \dot\beta \dot\delta} = T_{\mu \nu} \sigma^\mu_{\alpha \dot\beta} \sigma^\nu_{\gamma \dot\delta}.
+\end{equation}
+\subsection{\texorpdfstring{$(\frac{1}{2}, \frac{1}{2}) \otimes (\frac{1}{2}, \frac{1}{2}) = (1, 1) \oplus (1, 0) \oplus (0, 1) \oplus (0, 0)$}{(1/2,1/2) x (1/2,1/2) = (1,1) + (1,0) + (0,1) + (0,0)}}
+First, $(\frac{1}{2}, 0) \otimes (\frac{1}{2}, 0) = (1, 0) \oplus (0, 0)$ and
+\begin{align}
+    \ket{1, 1}_L & = \ket{\tfrac{1}{2}, \tfrac{1}{2}; \tfrac{1}{2}, \tfrac{1}{2}}_L, \notag \\
+    \ket{1, 0}_L & = \frac{1}{\sqrt{2}} \bigl( \ket{\tfrac{1}{2}, \tfrac{1}{2}; \tfrac{1}{2}, - \tfrac{1}{2}}_L + \ket{\tfrac{1}{2}, - \tfrac{1}{2}; \tfrac{1}{2}, \tfrac{1}{2}}_L \bigr), \notag \\
+    \ket{1, - 1}_L & = \ket{\tfrac{1}{2}, - \tfrac{1}{2}; \tfrac{1}{2}, - \tfrac{1}{2}}_L, \notag \\[2mm]
+    \ket{0, 0}_L & = \frac{1}{\sqrt{2}} \bigl( \ket{\tfrac{1}{2}, \tfrac{1}{2}; \tfrac{1}{2}, - \tfrac{1}{2}}_L - \ket{\tfrac{1}{2}, - \tfrac{1}{2}; \tfrac{1}{2}, \tfrac{1}{2}}_L \bigr).
+\end{align}
+Similarly, $(0, \frac{1}{2}) \otimes (0, \frac{1}{2}) = (0, 1) \oplus (0, 0)$.
+
+The CG coefficients are
+\begin{equation}
+    \braket{\tfrac{1}{2}, \alpha; \tfrac{1}{2}, \gamma | 0, 0}_L = \frac{\epsilon_{\alpha \gamma}}{\sqrt{2}}, \qquad \braket{\tfrac{1}{2}, \dot\beta; \tfrac{1}{2}, \dot\delta | 0, 0}_R = \frac{\epsilon_{\dot\beta \dot\delta}}{\sqrt{2}}.
+\end{equation}
+With the CG coefficients, we can write
+\begin{equation}
+    \ket{T} = \sum_{j = 0}^1 \sum_{k = 0}^1 T_{j m, k n} \ket{j m}_L \otimes \ket{k n}_R,
+\end{equation}
+and
+\begin{equation}
+    T_{\alpha \gamma \dot\beta \dot\delta} = \sum_{j m k n} T_{j m, k n} \braket{\tfrac{1}{2}, \alpha; \tfrac{1}{2}, \gamma | j m}_L \braket{\tfrac{1}{2}, \dot\beta; \tfrac{1}{2}, \dot\delta | k n}_R. \label{From (A,B) to spinor indices}
+\end{equation}
+\subsection{\texorpdfstring{$(0, 0)$}{(0,0)}}
+The $j = k = m = n = 0$ part of the tensor is
+\begin{align}
+    & T_{\alpha \gamma \dot\beta \dot\delta} \supset T_{0 0 0 0} \frac{\epsilon_{\alpha \gamma} \epsilon_{\dot\beta \dot\delta}}{2} \qquad (\text{let }T_0 \equiv T_{0 0 0 0}) \\
+    \Rightarrow \quad & T_{\mu \nu} \supset \frac{T_0}{8} \Tr(\bar\sigma_\mu \sigma_\nu) = - \frac{T_0}{4} \eta_{\mu \nu}.
+\end{align}
+\subsection{\texorpdfstring{$(1, 0)$ \& $(0, 1)$}{(1,0) and (0,1)}}
+First, we consider $j = 1$, $k = 0$:
+\begin{equation}
+    T_{\alpha \gamma \dot\beta \dot\delta} \supset T_{1 m 0 0} \braket{\tfrac{1}{2}, \alpha; \tfrac{1}{2}, \gamma | 1 m} \frac{\epsilon_{\dot\beta \dot\delta}}{\sqrt{2}} \qquad (\text{let }T_{1 m 0 0} \equiv T_m^L).
+\end{equation}
+\begin{framed}
+    A crucial observation here is that
+    \begin{align}
+        & \braket{\tfrac{1}{2}, \alpha; \tfrac{1}{2}, \gamma | 1 m} = \Sym_{\alpha \gamma} \braket{\cdots}, \\
+        & \Sym_{\alpha \gamma} T_{\alpha \gamma \cdots} = \frac{T_{\alpha \gamma \cdots} + T_{\gamma \alpha \cdots}}{2}
+    \end{align}
+    and
+    \begin{equation}
+        \braket{\tfrac{1}{2}, \alpha; \tfrac{1}{2}, \gamma | 0 0} = \epsilon_{\alpha \gamma} \left( - \frac{\epsilon^{\alpha' \gamma'}}{2} \braket{\tfrac{1}{2}, \alpha'; \tfrac{1}{2}, \gamma' | 0 0} \right).
+    \end{equation}
+\end{framed}
+These operations project onto the $(1, 1)$, $(1, 0)$, $(0, 1)$, and $(0, 0)$ representations.
+
+Explicitly,
+\begin{align}
+    \Sym_{\alpha \gamma} \Sym_{\dot\beta \dot\delta} T_{\alpha \gamma \dot\beta \dot\delta} & \in (1, 1), \notag \\
+    \Sym_{\alpha \gamma} \Anti_{\dot\beta \dot\delta} T & \in (1, 0), \notag \\
+    \Anti_{\alpha \gamma} \Sym_{\dot\beta \dot\delta} T & \in (0, 1), \notag \\
+    \Anti_{\alpha \gamma} \Anti_{\dot\beta \dot\delta} T & \in (0, 0).
+\end{align}

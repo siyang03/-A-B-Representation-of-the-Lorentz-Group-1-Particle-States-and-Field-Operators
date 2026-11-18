@@ -1,0 +1,104 @@
+\section{From \texorpdfstring{$(A, B)$}{(A,B)} to Spin}
+We restrict to the massive little group
+\begin{equation}
+    (A, B) \Big|_{\mathrm{SO}(3)} = \bigoplus_{j = |A - B|}^{A + B} (j),
+\end{equation}
+choose a particle spin $j$, obtain the CG coefficients
+\begin{equation}
+    u_{a b}(k, \sigma) = \braket{A a; B b | j \sigma},
+\end{equation}
+and boost them to
+\begin{equation}
+    u_{\mu \nu}(p, \sigma)
+\end{equation}
+to build the spin-$j$ covariant field. See \textit{1PSs \& Field Operators} for more detail.
+
+As a more concrete example, let us consider
+\begin{equation}
+    (1, 1) \Big|_{\mathrm{SO}(3)} = (0) \oplus (1) \oplus (2).
+\end{equation}
+First we need to project $a, b$ to the spinor indices by \eqref{From (A,B) to spinor indices}, then project the spinor indices to tensor indices, explicitly
+\begin{align}
+    & \begin{dcases}
+        \tensor{u}{_\alpha_\gamma^{\dot\beta}^{\dot\delta}}(k; j, \sigma) = u_{a b}(k; j, \sigma) \braket{\tfrac{1}{2} \alpha; \tfrac{1}{2} \gamma | 1 a} \braket{\tfrac{1}{2} \dot{\beta}; \tfrac{1}{2} \dot{\delta} | 1 b}, \\
+        u_{\mu \nu}(k; j, \sigma) = \frac{1}{4} \bar{\sigma}^{\dot{\beta} \alpha}_\mu \bar{\sigma}^{\dot{\delta} \gamma}_\nu u_{\alpha \gamma \dot{\beta} \dot{\delta}}(k; j, \sigma)
+    \end{dcases} \\
+    \Rightarrow \quad & P^{a b}_{\mu \nu} = \frac{1}{4} \bar{\sigma}^{\dot{\beta} \alpha}_\mu \bar{\sigma}^{\dot{\delta} \gamma}_\nu \epsilon_{\dot{\beta} \dot{\beta}'} \epsilon_{\dot{\delta} \dot{\delta}'} \braket{\tfrac{1}{2} \alpha; \tfrac{1}{2} \gamma | 1 a} \braket{\tfrac{1}{2} \dot{\beta}'; \tfrac{1}{2} \dot{\delta}' | 1 b}.
+\end{align}
+We obtain the following rest-frame, $k = (m, 0, 0, 0)$, coefficient tensors. For $j = 0$,
+\begin{equation}
+    u_{\mu \nu}(k; 0, 0) = \frac{1}{4 \sqrt{3}} \begin{pmatrix}
+        3 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 1
+    \end{pmatrix}.
+\end{equation}
+For $j = 1$,
+\begin{align}
+    u_{\mu \nu}(k; 1, 1) &= \frac{1}{4} \begin{pmatrix}
+        0 & - 1 & - i & 0 \\
+        - 1 & 0 & 0 & 0 \\
+        - i & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0
+    \end{pmatrix}, \quad u_{\mu \nu}(k; 1, 0) = \frac{1}{2 \sqrt{2}} \begin{pmatrix}
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 \\
+        1 & 0 & 0 & 0
+    \end{pmatrix}, \\
+    u_{\mu \nu}(k; 1, - 1) &= \frac{1}{4} \begin{pmatrix}
+        0 & 1 & - i & 0 \\
+        1 & 0 & 0 & 0 \\
+        - i & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0
+    \end{pmatrix}.
+\end{align}
+For $j = 2$,
+\begin{align}
+    u_{\mu \nu}(k; 2, 2) &= \frac{1}{4} \begin{pmatrix}
+        0 & 0 & 0 & 0 \\
+        0 & 1 & i & 0 \\
+        0 & i & - 1 & 0 \\
+        0 & 0 & 0 & 0
+    \end{pmatrix}, \quad u_{\mu \nu}(k; 2, 1) = \frac{1}{4} \begin{pmatrix}
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & - 1 \\
+        0 & 0 & 0 & - i \\
+        0 & - 1 & - i & 0
+    \end{pmatrix}, \\
+    u_{\mu \nu}(k; 2, 0) &= \frac{1}{2 \sqrt{6}} \begin{pmatrix}
+        0 & 0 & 0 & 0 \\
+        0 & - 1 & 0 & 0 \\
+        0 & 0 & - 1 & 0 \\
+        0 & 0 & 0 & 2
+    \end{pmatrix}, \quad u_{\mu \nu}(k; 2, - 1) = \frac{1}{4} \begin{pmatrix}
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & - i \\
+        0 & 1 & - i & 0
+    \end{pmatrix}, \\
+    u_{\mu \nu}(k; 2, - 2) & = \frac{1}{4} \begin{pmatrix}
+        0 & 0 & 0 & 0 \\
+        0 & 1 & - i & 0 \\
+        0 & - i & - 1 & 0 \\
+        0 & 0 & 0 & 0
+    \end{pmatrix}.
+\end{align}
+All nine tensors are symmetric and traceless.
+Under the massive little group $\mathrm{SO}(3)$, their components are organized as
+\begin{align}
+    j = 0 &: \quad \boxed{u_{0 0}}, \quad u_{i j} = \frac{1}{3} \delta_{i j} u_{0 0}, \notag \\
+    j = 1 &: \quad \boxed{u_{0 i}} = u_{i 0}, \quad u_{0 0} = u_{i j} = 0, \notag \\
+    j = 2 &: \quad \boxed{u_{i j}} = u_{j i}, \quad \delta^{i j} u_{i j} = 0, \quad u_{0 0} = u_{0 i} = 0. \label{From (1,1) to spins}
+\end{align}
+
+In particular, consider
+\begin{equation}
+    O_{\mu \nu} = \Big( \partial_\mu \partial_\nu - \frac{1}{4} \eta_{\mu \nu} \partial^2 \Big) \sigma,
+\end{equation}
+we have
+\begin{equation}
+    u_{\mu \nu}(k) \propto \braket{0 | O_{\mu \nu}(0) | k} = - \Big( k_\mu k_\nu - \frac{1}{4} \eta_{\mu \nu} k^2 \Big) \braket{0 | \sigma(0) | k}.
+\end{equation}
+Comparing to \eqref{From (1,1) to spins} we know $O_{\mu \nu}$ creates spin-0 particles.
